@@ -4,6 +4,7 @@
   "version": "0.1.5",
   "author": "Tapha @ PlanFlow.dev <tapha@planflow.com>",
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "gatsby": "^5.11.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^2.11.0",

@@ -38,9 +38,9 @@ module.exports = {
     },
     // Add `top-100` and similar classes for absolute-positioned elements
     inset: {
-      '0': 0,
+      0: 0,
       auto: 'auto',
-      '100': '100%',
+      100: '100%',
     },
     extend: {
       // Prettier box shadows: https://box-shadows.co/
@@ -77,15 +77,15 @@ module.exports = {
         beige: '#F3E8D9',
         // Overwrite default grays with a neutral shade (defaults are blue-ish)
         gray: {
-          '100': '#f5f5f5',
-          '200': '#eeeeee',
-          '300': '#e0e0e0',
-          '400': '#bdbdbd',
-          '500': '#9e9e9e',
-          '600': '#757575',
-          '700': '#616161',
-          '800': '#424242',
-          '900': '#212121',
+          100: '#f5f5f5',
+          200: '#eeeeee',
+          300: '#e0e0e0',
+          400: '#bdbdbd',
+          500: '#9e9e9e',
+          600: '#757575',
+          700: '#616161',
+          800: '#424242',
+          900: '#212121',
         },
       },
       // We all need that container that is almost-but-not-quite full height
@@ -127,5 +127,6 @@ module.exports = {
     require('@tailwindcss/custom-forms'),
     require('tailwindcss-responsive-embed'),
     require('tailwindcss-aspect-ratio'),
+    require('@tailwindcss/typography'),
   ],
 };
