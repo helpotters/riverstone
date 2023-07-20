@@ -10,7 +10,8 @@ const Footer = ({ companyName }) => (
           Join Our Facebook Group
         </h2>
         <p className="pl-px text-xs text-center text-gray-700 sm:text-left">
-          Latest news, articles and updates delivered directly to you.
+          See more about what other customers have to say and how our ovens have
+          served them.
         </p>
       </div>
     </div>
@@ -20,7 +21,7 @@ const Footer = ({ companyName }) => (
           © {companyName}, {new Date().getFullYear()}.{' '}
         </span>
         <span className="flex justify-center mt-4 text-xs italic sm:mt-0 sm:justify-start">
-          Made In A Laptop
+          Made by Paul Lemus
           <img
             className="w-6 ml-2"
             alt="A Laptop"

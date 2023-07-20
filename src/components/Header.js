@@ -12,15 +12,14 @@ function Header({ siteTitle }) {
         <Link to="/" className="">
           <div className="no-underline opacity-100 hover:text-white hover:no-underline">
             <span className="pl-2 text-2xl text-blue">
-              <img alt="Simplicity Farms" className="inline w-48" src={mainLogo} />
+              <p className="font-bold">Riverstone</p>
               {/* {siteTitle} */}
             </span>
           </div>
         </Link>
         <div
-          className={`${
-            isExpanded ? `hidden` : `hidden`
-          } sm:hidden md:hidden lg:block text-lg`}
+          className={`${isExpanded ? `hidden` : `hidden`
+            } sm:hidden md:hidden lg:block text-lg`}
         >
           {[
             {
@@ -30,10 +29,6 @@ function Header({ siteTitle }) {
             {
               route: `/our-team`,
               title: `Our Team`,
-            },
-            {
-              route: `/our-farm`,
-              title: `Our Farm`,
             },
             {
               route: `/our-blog`,
@@ -76,9 +71,8 @@ function Header({ siteTitle }) {
           </button>
           {/* beginning of small navbar */}
           <div
-            className={`${
-              isExpanded ? `block` : `hidden`
-            } lg:hidden text-lg relative float-right inline-block text-left`}
+            className={`${isExpanded ? `block` : `hidden`
+              } lg:hidden text-lg relative float-right inline-block text-left`}
           >
             <div className="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
               <div className="bg-white rounded-md shadow-xs">

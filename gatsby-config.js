@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Simplicity Itself',
-    description:
-      'A Simple, Free Gatsby/TailwindCSS Starter Theme For Business Websites',
-    author: 'https://PlanFlow.dev',
-    company: 'Your Company Name Here',
+    title: 'Riverstone OVens',
+    description: 'Food-specific commercial ovens for your restaurant',
+    author: 'https://helpotters.com',
+    company: 'Riverstone Ovens',
   },
   plugins: [
     'gatsby-plugin-postcss',
