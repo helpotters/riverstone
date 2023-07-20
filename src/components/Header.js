@@ -24,7 +24,7 @@ function Header({ siteTitle }) {
           {[
             {
               route: `/our-story`,
-              title: `Our Story`,
+              title: `Our Process`,
             },
             {
               route: `/our-team`,
@@ -35,7 +35,7 @@ function Header({ siteTitle }) {
               title: `Our Blog`,
             },
             {
-              route: `/our-products`,
+              route: `/products`,
               title: `Our Products`,
             },
           ].map((link) => (
