@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Simplicity Itself',
-    description: 'A Simple, Free Gatsby/TailwindCSS Starter Theme For Business Websites',
+    description:
+      'A Simple, Free Gatsby/TailwindCSS Starter Theme For Business Websites',
     author: 'https://PlanFlow.dev',
     company: 'Your Company Name Here',
   },
@@ -40,5 +41,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
+    //
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/src/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
