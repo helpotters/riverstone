@@ -10,9 +10,10 @@ import SEO from 'src/components/SEO';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+
     <div className="flex flex-col justify-center items-center">
       {/* Heading */}
-      <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 w-screen flex-shrink-0 relative gap-16 bg-[#351515]/[0.59]">
+      <section className="flex flex-col justify-center items-center self-stretch flex-grow-0 w-screen flex-shrink-0 relative gap-16 bg-[#351515]/[0.59]">
         <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 overflow-hidden gap-2.5 px-[213px] pt-[89px] pb-4">
           <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
             <p className="self-stretch flex-grow-0 flex-shrink-0 text-4xl font-bold text-center uppercase text-white">
@@ -51,8 +52,9 @@ const IndexPage = () => (
           <path d="M1111.44 11L1156.35 0L1204.76 11H1111.44Z" fill="#D9D9D9" />
           <path d="M1204.76 11L1243.34 0L1281 11H1204.76Z" fill="#D9D9D9" />
         </svg>
-      </div>
-      <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[1037px] overflow-hidden gap-[39px] px-[41px] py-20">
+      </section>
+      {/* Sub Hero */}
+      <section className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[1037px] overflow-hidden gap-[39px] px-[41px] py-20">
         <div className="flex flex-col justify-center items-center flex-grow relative gap-8">
           <p className="self-stretch flex-grow-0 flex-shrink-0 w-[458px] text-[26px] font-semibold text-left text-black">
             We cover what others don’t.
@@ -104,7 +106,7 @@ const IndexPage = () => (
             />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </Layout>
 );
