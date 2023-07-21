@@ -32,3 +32,37 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
 };
+const path = require('path');
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  // Query for all MarkdownRemark nodes to get slugs
+  const result = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Create pages for each Markdown file using the template and slug
+  const productPostTemplate = path.resolve(
+    './src/pages/products/{markdownRemark.frontmatter__slug}.jsx',
+  );
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: productPostTemplate,
+      context: {
+        slug: node.fields.slug,
+      },
+    });
+  });
+};

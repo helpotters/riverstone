@@ -23,7 +23,7 @@ export function HomePage({ data }) {
                 >
                   {post.frontmatter.date}
                 </time>
-                <a href={String(post.fields.slug)} className="">
+                <a href={`${post.fields.slug}`} className="">
                   <h3 className="mt-0.5 text-lg no-underline font-medium text-gray-900">
                     {post.frontmatter.title}
                   </h3>
@@ -51,7 +51,6 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 250)
           id
           frontmatter {
             title
@@ -62,5 +61,4 @@ export const pageQuery = graphql`
     }
   }
 `;
-
 export default HomePage;
