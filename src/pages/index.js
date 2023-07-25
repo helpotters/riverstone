@@ -69,7 +69,7 @@ const IndexPage = () => (
               <Button url="/products" children="View past designs" />
             </div>
             <div className="flex justify-start items-start flex-grow-0 flex-shrink-0">
-              <Button url="/products" children="Message us a question" />
+              <Button url="/contact" children="Message us a question" />
             </div>
           </div>
         </div>

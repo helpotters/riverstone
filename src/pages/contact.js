@@ -16,11 +16,17 @@ const ContactPage = () => (
                 Contact Us
               </h1>
               <p className="mx-auto text-base leading-relaxed lg:w-2/3">
-                Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-                gentrify.
+                Feel free to reach out with any questions. We're more than happy
+                to share our knowledge about ovens or commercial kitchen
+                construction.
               </p>
             </div>
-            <div className="mx-auto lg:w-1/2 md:w-2/3">
+            <form
+              className="mx-auto lg:w-1/2 md:w-2/3"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
               <div className="flex flex-wrap -m-2">
                 <div className="w-1/2 p-2">
                   <input
@@ -48,7 +54,7 @@ const ContactPage = () => (
                   </button>
                 </div>
                 <div className="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
-                  <a className="text-secondary">example@email.com</a>
+                  <a className="text-secondary">gushanna@outlook.com</a>
                   <p className="my-5 leading-normal">
                     49 Smith St.
                     <br />
@@ -115,7 +121,7 @@ const ContactPage = () => (
                   </span>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </section>
       </div>
