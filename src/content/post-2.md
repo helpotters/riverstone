@@ -1,6 +1,7 @@
 ---
 date: '2023-07-19'
 title: 'INNER JOINS'
+featuredImage: ../images/oven.png
 datapoints:
   - label: Temperatures
     value: 120F-450F

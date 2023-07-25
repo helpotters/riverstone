@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from 'src/components/Layout';
 import SEO from 'src/components/SEO';
@@ -27,20 +28,21 @@ export function HomePage({ data }) {
                 return (
                   <li>
                     <Link to={post.fields.slug} className="block overflow-hidden group">
-                      <img
-                        src="a-placeholder_image_url"
-                        alt=""
+                      <GatsbyImage
+                        image={getImage(
+                          post.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData,
+                        )}
                         className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px] bg-blue-400"
                       />
 
                       <div className="relative pt-3 bg-white">
                         <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
-                          {post.frontmatter.title}
+                          {post.frontmatter.date}
                         </h3>
 
                         <p className="mt-2">
                           <span className="sr-only"> Date </span>
-                          <span className="tracking-wider text-gray-900">{post.frontmatter.date}</span>
+                          <span className="tracking-wider text-gray-900">{post.frontmatter.title}</span>
                         </p>
                       </div>
                     </Link>
@@ -66,6 +68,11 @@ export const pageQuery = graphql`
           }
           id
           frontmatter {
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 800)
+              }
+            }
             title
             date(formatString: "MMMM DD, YYYY")
           }
