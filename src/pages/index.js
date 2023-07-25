@@ -6,6 +6,7 @@ import pita from 'src/images/pita.png';
 import tandoor from 'src/images/tandoor.png';
 
 import SEO from 'src/components/SEO';
+import Button from 'src/components/Button';
 
 const IndexPage = () => (
   <Layout>
@@ -65,18 +66,10 @@ const IndexPage = () => (
           </p>
           <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 gap-8">
             <div className="flex justify-start items-start flex-grow-0 flex-shrink-0">
-              <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2 px-3 py-2.5 rounded-md bg-gray-800">
-                <p className="flex-grow-0 flex-shrink-0 text-[15px] font-semibold text-center text-white">
-                  View past designs
-                </p>
-              </div>
+              <Button url="/products" children="View past designs" />
             </div>
             <div className="flex justify-start items-start flex-grow-0 flex-shrink-0">
-              <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2 px-3 py-2.5 rounded-md bg-gray-100">
-                <p className="flex-grow-0 flex-shrink-0 text-[15px] font-semibold text-center text-gray-800">
-                  Message us a question
-                </p>
-              </div>
+              <Button url="/products" children="Message us a question" />
             </div>
           </div>
         </div>
