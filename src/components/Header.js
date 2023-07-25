@@ -12,7 +12,7 @@ function Header({ siteTitle }) {
         <Link to="/" className="">
           <div className="no-underline opacity-100 hover:text-white hover:no-underline">
             <span className="pl-2 text-2xl text-blue">
-              <p className="font-bold">Riverstone</p>
+              <img alt="Riverstone Ovens Inc" src={mainLogo} className="h-32" />
               {/* {siteTitle} */}
             </span>
           </div>
