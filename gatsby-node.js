@@ -66,3 +66,25 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  const typeDefs = `
+    type MarkdownRemarkFrontmatterDatapoints {
+      label: String
+      value: String
+    }
+
+    type MarkdownRemarkFrontmatter {
+      date: Date @dateformat
+      title: String
+      datapoints: [MarkdownRemarkFrontmatterDatapoints]
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: MarkdownRemarkFrontmatter
+    }
+  `;
+
+  createTypes(typeDefs);
+};

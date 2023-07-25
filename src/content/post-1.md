@@ -1,6 +1,14 @@
 ---
-date: '2023-07-19'
 title: 'Decorators'
+date: '2023-07-19'
+featuredImage: ../images/oven.png
+datapoints:
+  - label: Temperatures
+    value: 120F-450F
+  - label: Fuel Types
+    value: Wood or Gas
+  - label: NSF-4 Certification
+    value: Up to code, but requires paid certification.
 ---
 
 # Table of Contents

@@ -1,6 +1,11 @@
 ---
 date: '2023-07-19'
 title: 'INNER JOINS'
+datapoints:
+  - label: Temperatures
+    value: 120F-450F
+  - label: Another Data Point
+    value: 1234
 ---
 
 # Table of Contents
