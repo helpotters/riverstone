@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Riverstone OVens',
+    title: 'Riverstone Ovens',
     description: 'Food-specific commercial ovens for your restaurant',
     author: 'https://helpotters.com',
     company: 'Riverstone Ovens',

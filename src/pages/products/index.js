@@ -25,13 +25,18 @@ export function HomePage({ data }) {
             {posts
               .filter((post) => post.node.frontmatter.title.length > 0)
               .map(({ node: post }) => {
+                const featuredImg = getImage(
+                  post.frontmatter.featuredImage?.childImageSharp
+                    ?.gatsbyImageData,
+                );
                 return (
-                  <li>
-                    <Link to={post.fields.slug} className="block overflow-hidden group">
+                  <li key={post.id}>
+                    <Link
+                      to={post.fields.slug}
+                      className="block overflow-hidden group"
+                    >
                       <GatsbyImage
-                        image={getImage(
-                          post.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData,
-                        )}
+                        image={featuredImg}
                         className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px] bg-blue-400"
                       />
 
@@ -42,7 +47,9 @@ export function HomePage({ data }) {
 
                         <p className="mt-2">
                           <span className="sr-only"> Date </span>
-                          <span className="tracking-wider text-gray-900">{post.frontmatter.title}</span>
+                          <span className="tracking-wider text-gray-900">
+                            {post.frontmatter.title}
+                          </span>
                         </p>
                       </div>
                     </Link>
@@ -55,6 +62,7 @@ export function HomePage({ data }) {
     </Layout>
   );
 }
+
 export const pageQuery = graphql`
   query HomePageQuery {
     allMarkdownRemark(
@@ -81,4 +89,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
 export default HomePage;

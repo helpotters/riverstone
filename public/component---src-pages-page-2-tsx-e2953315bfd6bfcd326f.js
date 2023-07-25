@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_tailwind_simplicity_theme=self.webpackChunkgatsby_tailwind_simplicity_theme||[]).push([[473],{9794:function(e,t,l){l.r(t);var a=l(7294),n=l(1883),i=l(3323),c=l(5739);t.default=e=>a.createElement(i.Z,null,a.createElement(c.Z,{title:"Page two"}),a.createElement("h1",null,"Hi from the second page"),a.createElement("p",null,"Welcome to page 2 (",e.path,")"),a.createElement(n.Link,{className:"inline-block mb-6",to:"/"},"Go back to the homepage"))}}]);
+//# sourceMappingURL=component---src-pages-page-2-tsx-e2953315bfd6bfcd326f.js.map

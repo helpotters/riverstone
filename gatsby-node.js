@@ -1,15 +1,9 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { createFilePath } = require('gatsby-source-filesystem');
+const path = require('path');
 
-// You can delete this file if you're not using it
-
-const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     const parent = getNode(node.parent);
     let collection = parent.sourceInstanceName;
     createNodeField({
@@ -32,7 +26,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
 };
-const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -53,26 +46,31 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   // Create pages for each Markdown file using the template and slug
-  const productPostTemplate = path.resolve(
-    './src/pages/products/{markdownRemark.frontmatter__slug}.jsx',
-  );
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: productPostTemplate,
+      component: path.resolve(
+        './src/templates/{MarkdownRemark.fields__slug}.jsx',
+      ),
       context: {
         slug: node.fields.slug,
       },
     });
   });
 };
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   const typeDefs = `
-    type MarkdownRemarkFrontmatterDatapoints {
-      label: String
-      value: String
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields
+      frontmatter: MarkdownRemarkFrontmatter
+    }
+
+    type MarkdownRemarkFields {
+      slug: String
+      collection: String
     }
 
     type MarkdownRemarkFrontmatter {
@@ -81,8 +79,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       datapoints: [MarkdownRemarkFrontmatterDatapoints]
     }
 
-    type MarkdownRemark implements Node {
-      frontmatter: MarkdownRemarkFrontmatter
+    type MarkdownRemarkFrontmatterDatapoints {
+      label: String
+      value: String
     }
   `;
 
