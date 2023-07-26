@@ -121,6 +121,7 @@ const ContactPage = () => (
                   </span>
                 </div>
               </div>
+              <button type="submit">Send</button>
             </form>
           </div>
         </section>
